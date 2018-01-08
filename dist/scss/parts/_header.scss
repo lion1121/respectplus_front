@@ -1,0 +1,96 @@
+.main_header_wrapper {
+  .top_menu_wrapper {
+    background: #111111;
+  }
+  .social_item {
+    border-left: 2px solid #222222;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    a {
+      @include color-link($secondary-text-color);
+      transition: all 1s ease;
+      &:hover {
+        color: #fff;
+      }
+    }
+    &:last-child {
+      border-right: 2px solid #222222;
+    }
+  }
+}
+
+.social_item_list {
+  margin: 0;
+}
+
+.header_phone_block {
+  font-size: 14px;
+  color: $secondary-text-color;
+}
+
+.header_logo_box {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  z-index: 999;
+  width: 245px;
+  height: 120px;
+  background: $primary-color-red;
+  img {
+    margin: 17px 0 0 20px;
+  }
+  .real_estate_name, .real_estate {
+    @include color-link(#fff)
+
+  }
+  span {
+    font-weight: 300;
+  }
+  h1 {
+    color: #fff;
+    margin: -7px 0 0 21px;
+
+  }
+  h2 {
+    margin: -18px 0 0 23px;
+  }
+  .real_estate_name {
+    font-size: 36px;
+  }
+  .real_estate {
+    font-size: 18px;
+  }
+}
+
+.main_nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  height: 76px;
+  margin: 0;
+  font-size: 0;
+    .menu_link {
+      text-transform: uppercase;
+      @include color-link($primary-color-black);
+      font-weight: 700;
+      font-size: 15px;
+      position: relative;
+    }
+    li {
+      padding: 0 10px;
+    }
+    li:not(.active_link) a:hover:after {
+      position: absolute;
+      content: '';
+      top: 20px;
+      left: 0;
+      border-radius: 5px;
+      width: 100%;
+      height: 2px;
+      background: $primary-color-black;
+      animation: menu_underline 0.7s;
+    }
+}

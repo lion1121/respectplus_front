@@ -1,3 +1,25 @@
+@import "helpers/animation";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "parts/header";
 body {
-  background: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+.row.no_mg {
+  margin: 0;
+}
+[class^="col-"].no_pd {
+  padding-right:0;
+  padding-left:0;
+}
+.container-fluid.no_pd {
+  padding-right: 0;
+  padding-left:0;
+}
+.container.no_pd {
+  padding-right: 0;
+  padding-left:0;
+}
+.text_bold {
+  font-weight: 700;
 }
