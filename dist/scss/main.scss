@@ -2,8 +2,10 @@
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "parts/header";
+@import "parts/index";
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #eeeeee;
 }
 .row.no_mg {
   margin: 0;
