@@ -93,7 +93,7 @@
       color: #2b2b2b; }
   .main_nav li {
     padding: 0 10px; }
-  .main_nav li:not(.active_link) a:hover:after {
+  .main_nav .menu_item:not(.active_link) .menu_link:hover:after {
     position: absolute;
     content: '';
     top: 20px;
@@ -103,6 +103,42 @@
     height: 2px;
     background: #2b2b2b;
     animation: menu_underline 0.7s; }
+
+.submenu {
+  display: none;
+  width: 180px;
+  flex-direction: column;
+  top: 25px;
+  left: 9px; }
+  .submenu a {
+    width: auto;
+    text-transform: uppercase;
+    color: #2b2b2b;
+    font-weight: 700;
+    font-size: 15px;
+    position: relative; }
+    .submenu a:link {
+      text-decoration: none;
+      color: #2b2b2b; }
+    .submenu a:visited {
+      text-decoration: none;
+      color: #2b2b2b; }
+  .submenu .dropdown-menu_item {
+    flex-grow: 1;
+    padding: 5px 3px; }
+    .submenu .dropdown-menu_item:hover {
+      background: rgba(255, 255, 255, 0.4); }
+
+.fa-angle-down, .fa-angle-up {
+  font-size: 20px;
+  color: #000;
+  padding: 0 0 0 5px; }
+
+.fa-angle-up {
+  display: none; }
+
+.dropdown_element:hover .submenu {
+  display: flex; }
 
 .sticky {
   position: fixed;
@@ -169,19 +205,6 @@
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px); }
 
-@media screen and (max-width: 992px) {
-  .header_logo_box .real_estate_name {
-    font-size: 30px; }
-  .header_logo_box h1 {
-    color: #fff;
-    margin: -10px 0 0 8px; }
-  .header_logo_box h2 {
-    margin: -17px 0 0 9px; }
-  .main_nav li {
-    padding: 0 6px; }
-  .header_logo_box .real_estate {
-    font-size: 15px; } }
-
 .arrows_box {
   right: 12px;
   top: 0;
@@ -195,10 +218,8 @@
     background-color: #eeeeee;
     vertical-align: top;
     right: 0;
-    transition: 0.8s;
-    background: url("../img/slider/next-arrow.png") center center no-repeat; }
+    transition: 0.8s; }
     .arrows_box .prev:hover {
-      background: url("../img/slider/next-arrow-hover.png") center center no-repeat;
       border: 2px solid #aaaaaa; }
   .arrows_box .next {
     cursor: pointer;
@@ -209,14 +230,32 @@
     background-color: #eeeeee;
     vertical-align: top;
     left: 0;
-    transition: 0.8s;
-    background: url("../img/slider/prev-arrow.png") center center no-repeat; }
+    transition: 0.8s; }
     .arrows_box .next:hover {
-      border: 2px solid #aaaaaa;
-      background: url("../img/slider/prev-arrow-hover.png") center center no-repeat; }
+      border: 2px solid #aaaaaa; }
 
 .slick-active {
   outline: none !important; }
+
+.slide_wrapper {
+  height: 200px;
+  margin: 0 5px; }
+
+.prev i {
+  transition: 0.8s;
+  padding: 2px 0 0 12px;
+  font-size: 30px; }
+
+.prev:hover i {
+  color: #aaaaaa; }
+
+.next i {
+  transition: 0.8s;
+  padding: 2px 0 0 12px;
+  font-size: 30px; }
+
+.next:hover i {
+  color: #aaaaaa; }
 
 .main_section {
   padding: 50px 0; }
@@ -324,53 +363,49 @@
     font-size: 14px;
     font-weight: 400; }
 
-.property_wrapper {
-  height: 200px;
-  margin: 0 5px; }
-
-.last_property_description {
+.slide_description {
   max-width: 50%;
   flex-grow: 1;
   padding: 20px 10px 20px 10px;
   background: #fff; }
-  .last_property_description a {
+  .slide_description a {
     transition: 0.8s;
     font-size: 18px;
     font-weight: 400;
     color: #333333; }
-    .last_property_description a:link {
+    .slide_description a:link {
       text-decoration: none;
       color: #333333; }
-    .last_property_description a:visited {
+    .slide_description a:visited {
       text-decoration: none;
       color: #333333; }
-    .last_property_description a:hover {
+    .slide_description a:hover {
       color: #d84949; }
-      .last_property_description a:hover:link {
+      .slide_description a:hover:link {
         text-decoration: none;
         color: #d84949; }
-      .last_property_description a:hover:visited {
+      .slide_description a:hover:visited {
         text-decoration: none;
         color: #d84949; }
-  .last_property_description p {
+  .slide_description p {
     color: #aaaaaa; }
 
-.last_property_id {
+.property_id {
   right: 5px;
   bottom: 5px;
   color: #aaaaaa; }
 
-.last_property_img_box {
+.slide_img_box {
   max-width: 50%;
   flex-grow: 1;
   background-color: #d7d7d7;
   overflow: hidden; }
-  .last_property_img_box .last_property_img {
+  .slide_img_box .slide_img {
     position: absolute;
     height: auto;
     width: 140%;
     left: -20%; }
-  .last_property_img_box .operation_type {
+  .slide_img_box .operation_type {
     top: 25px;
     left: 0;
     background: #d84949;
@@ -443,19 +478,8 @@
   top: 5px;
   right: 5px; }
 
-@media screen and (max-width: 992px) {
-  .main_index_img div:first-child {
-    width: 90% !important; }
-  .btn_opearation {
-    flex-direction: column; }
-    .btn_opearation a {
-      margin-bottom: 15px; }
-  .short_description_wrapper {
-    height: 90% !important; }
-  .short_description_wrapper h2 {
-    font-size: 35px; }
-  .btn_opearation a, .btn_opearation button {
-    padding: 15px 40px; } }
+.modal-open {
+  overflow: auto !important; }
 
 footer {
   background-color: #111111; }
@@ -509,13 +533,19 @@ footer {
       footer .copyright a:visited {
         text-decoration: none;
         color: #d84949; }
+  footer .footer_search_box input {
+    border-radius: 0; }
 
-@media screen and (max-width: 992px) {
-  footer .footer_btn_search {
-    padding: 7px 5px; } }
-
-body, html {
-  height: 100%; }
+.new_ad_sent {
+  box-sizing: border-box;
+  background: #d84949 !important;
+  border-color: #d84949; }
+  .new_ad_sent:active {
+    box-shadow: 0 0 0 0.2rem rgba(216, 73, 73, 0.8) !important;
+    border-color: #d84949 !important; }
+  .new_ad_sent:focus {
+    box-shadow: 0 0 0 0.2rem rgba(216, 73, 73, 0.8) !important;
+    border-color: #d84949 !important; }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -546,6 +576,33 @@ header {
 
 .display_flex {
   display: flex !important; }
+
+@media screen and (max-width: 992px) {
+  .header_logo_box .real_estate_name {
+    font-size: 30px; }
+  .header_logo_box h1 {
+    color: #fff;
+    margin: -10px 0 0 8px; }
+  .header_logo_box h2 {
+    margin: -17px 0 0 9px; }
+  .main_nav li {
+    padding: 0 6px; }
+  .header_logo_box .real_estate {
+    font-size: 15px; }
+  .main_index_img div:first-child {
+    width: 90% !important; }
+  .btn_opearation {
+    flex-direction: column; }
+    .btn_opearation a {
+      margin-bottom: 15px; }
+  .short_description_wrapper {
+    height: 90% !important; }
+  .short_description_wrapper h2 {
+    font-size: 35px; }
+  .btn_opearation a, .btn_opearation button {
+    padding: 15px 40px; }
+  footer .footer_btn_search {
+    padding: 7px 5px; } }
 
 @media screen and (max-width: 767px) {
   .header_logo_box {
@@ -606,7 +663,9 @@ header {
   .footer_search_box .input-group {
     width: 100%; }
   footer ul li {
-    padding: 0; } }
+    padding: 0; }
+  .advantage_wrapper .advantage_title:after {
+    left: 62px; } }
 
 @media screen and (max-width: 575px) {
   .main_index_img div:first-child {
@@ -614,6 +673,9 @@ header {
   .short_description_wrapper h2 font-siz
 .main_section {
     padding: 30px 0; }
+  .main_title {
+    padding: 0 0 0 15px;
+    font-size: 21px; }
   .header_logo_box {
     width: 215px; }
   .news_box {
@@ -635,4 +697,34 @@ header {
     margin-top: 60px; }
   .arrows_box {
     right: 40%;
-    top: 38px; } }
+    top: 38px; }
+  .main_section {
+    padding: 25px 0; }
+  .advantage_wrapper .advantage_title:after {
+    left: 74px; }
+  .news_box, .our_advantage_box {
+    flex-grow: 1;
+    flex-basis: auto; } }
+
+@media screen and (max-width: 420px) {
+  .header_logo_box {
+    width: 196px; }
+  .slide_wrapper {
+    height: auto;
+    flex-direction: column; }
+    .slide_wrapper div {
+      max-width: 100%; }
+    .slide_wrapper .slide_img_box {
+      height: 250px; }
+  .btn_opearation a, .btn_opearation button {
+    padding: 10px 15px;
+    font-size: 18px; }
+  .social_wrapper {
+    padding: 0; }
+  .arrows_box {
+    right: 35%; }
+  .advantage_wrapper h4 {
+    font-size: 18px;
+    margin-bottom: 12px; }
+  .advantage_title {
+    margin-bottom: 25px !important; } }

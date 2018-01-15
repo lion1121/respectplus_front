@@ -31,12 +31,11 @@ $(document).ready(function() {
 });
 
 $('.last_property_slider').slick({
-    dots: true,
     infinite: false,
     speed: 300,
     slidesToShow: 2,
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
+    prevArrow: $('.last_property_prev'),
+    nextArrow: $('.last_property_next'),
     dots:false,
     appendArrows:".arrows_box",
     slidesToScroll: 1,
@@ -67,7 +66,42 @@ $('.last_property_slider').slick({
         // instead of a settings object
     ]
 });
-
+$('.urgent_sail').slick({
+    infinite: false,
+    speed: 300,
+    slidesToShow: 2,
+    prevArrow: $('.urgent_arrow_prev'),
+    nextArrow: $('.urgent_arrow_next'),
+    dots:false,
+    appendArrows:".arrows_box",
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+    ]
+});
 $(document).ready(function () {
    $('.list_box').click(function() {
        if($(this).children('.list_switcher').hasClass('fa-minus')) {

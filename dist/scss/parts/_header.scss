@@ -90,7 +90,7 @@
   li {
     padding: 0 10px;
   }
-  li:not(.active_link) a:hover:after {
+  .menu_item:not(.active_link) .menu_link:hover:after {
     position: absolute;
     content: '';
     top: 20px;
@@ -102,6 +102,40 @@
     animation: menu_underline 0.7s;
   }
 }
+.submenu {
+  display: none;
+  width:180px;
+  flex-direction: column;
+  top: 25px;
+  left: 9px;
+    a {
+      width:auto;
+      text-transform: uppercase;
+      @include color-link($primary-color-black);
+      font-weight: 700;
+      font-size: 15px;
+      position: relative;
+    }
+  .dropdown-menu_item {
+    flex-grow: 1;
+    padding: 5px 3px;
+      &:hover {
+        background: rgba(255,255,255,0.4);
+      }
+  }
+}
+.fa-angle-down,.fa-angle-up {
+  font-size: 20px;
+  color: #000;
+  padding: 0 0 0 5px;
+}
+.fa-angle-up {
+  display: none;
+}
+.dropdown_element:hover .submenu {
+  display: flex;
+}
+
 
 .sticky {
   position: fixed;
@@ -164,24 +198,4 @@
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
-}
-@media screen and (max-width: 992px) {
-  .header_logo_box .real_estate_name {
-    font-size: 30px;
-  }
-  .header_logo_box h1 {
-    color: #fff;
-    margin: -10px 0 0 8px;
-  }
-  .header_logo_box h2 {
-    margin: -17px 0 0 9px;
-  }
-  .main_nav {
-    li {
-      padding: 0 6px;
-    }
-  }
-  .header_logo_box .real_estate {
-    font-size: 15px;
-  }
 }

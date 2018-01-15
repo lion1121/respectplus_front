@@ -51,10 +51,10 @@ footer {
       @include color-link($text-color-red);
     }
   }
-}
-
-@media screen and (max-width: 992px) {
-  footer .footer_btn_search {
-    padding: 7px 5px;
+  .footer_search_box {
+    input {
+      border-radius: 0;
+    }
   }
 }
+

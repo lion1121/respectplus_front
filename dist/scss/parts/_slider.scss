@@ -12,9 +12,7 @@
     vertical-align: top;
     right: 0;
     transition: 0.8s;
-    background: url("../img/slider/next-arrow.png") center center no-repeat;
     &:hover {
-      background: url("../img/slider/next-arrow-hover.png") center center no-repeat;
       border: 2px solid #aaaaaa;
     }
 
@@ -29,16 +27,40 @@
     vertical-align: top;
     left: 0;
     transition: 0.8s;
-    background: url("../img/slider/prev-arrow.png") center center no-repeat;
 
     &:hover {
       border: 2px solid #aaaaaa;
-      background: url("../img/slider/prev-arrow-hover.png") center center no-repeat;
 
     }
 
   }
 }
+
 .slick-active {
   outline: none !important;
+}
+
+.slide_wrapper {
+  height: 200px;
+  margin: 0 5px;
+}
+
+.prev i {
+  transition: 0.8s;
+  padding: 2px 0 0 12px;
+  font-size: 30px;
+}
+
+.prev:hover i {
+  color: #aaaaaa;
+}
+
+.next i {
+  transition: 0.8s;
+  padding: 2px 0 0 12px;
+  font-size: 30px;
+}
+
+.next:hover i {
+  color: #aaaaaa;
 }
