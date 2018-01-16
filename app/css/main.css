@@ -4,6 +4,12 @@
   to {
     width: 100%; } }
 
+@keyframes height_vertical {
+  from {
+    height: 0; }
+  to {
+    height: 100%; } }
+
 .main_header_wrapper {
   z-index: 2; }
   .main_header_wrapper .top_menu_wrapper {
@@ -405,16 +411,17 @@
     height: auto;
     width: 140%;
     left: -20%; }
-  .slide_img_box .operation_type {
-    top: 25px;
-    left: 0;
-    background: #d84949;
-    padding: 13px 20px;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #fff;
-    z-index: 100; }
+
+.operation_type {
+  top: 25px;
+  left: 0;
+  background: #d84949;
+  padding: 13px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  z-index: 1; }
 
 .news_box, .our_advantage_box {
   flex-grow: 1;
@@ -547,6 +554,78 @@ footer {
     box-shadow: 0 0 0 0.2rem rgba(216, 73, 73, 0.8) !important;
     border-color: #d84949 !important; }
 
+.estate_container {
+  flex-direction: row;
+  justify-content: center;
+  height: 247px;
+  margin-bottom: 30px; }
+  .estate_container .estate_container_img {
+    width: 370px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden; }
+    .estate_container .estate_container_img .estate_img_inner {
+      display: none;
+      position: absolute;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      text-align: center;
+      padding: 0; }
+      .estate_container .estate_container_img .estate_img_inner .fa-eye {
+        color: #aaaaaa;
+        font-size: 30px;
+        margin-top: 28%; }
+    .estate_container .estate_container_img:hover .estate_img_inner {
+      animation: height_vertical 0.8s;
+      display: block; }
+    .estate_container .estate_container_img .estate_link {
+      display: block;
+      width: 100%;
+      height: 247px;
+      position: absolute;
+      z-index: 1; }
+  .estate_container .estate_container_description {
+    padding: 22px 29px 25px 29px;
+    max-width: 800px; }
+    .estate_container .estate_container_description .estate_description_title {
+      font-size: 18px;
+      font-weight: 400;
+      transition: 0.8s;
+      color: #333333; }
+      .estate_container .estate_container_description .estate_description_title:link {
+        text-decoration: none;
+        color: #333333; }
+      .estate_container .estate_container_description .estate_description_title:visited {
+        text-decoration: none;
+        color: #333333; }
+      .estate_container .estate_container_description .estate_description_title:hover {
+        color: #d84949; }
+    .estate_container .estate_container_description .estate_description_text {
+      color: #aaaaaa;
+      font-size: 14px;
+      font-weight: 400; }
+  .estate_container .estate_info {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .estate_container .estate_info .estate-separator-line {
+      margin-bottom: 10px;
+      height: 1px;
+      background-color: #eeeeee; }
+    .estate_container .estate_info .estate_icon {
+      color: #666666;
+      font-size: 14px;
+      font-weight: 400; }
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #eeeeee;
@@ -665,7 +744,15 @@ header {
   footer ul li {
     padding: 0; }
   .advantage_wrapper .advantage_title:after {
-    left: 62px; } }
+    left: 62px; }
+  .estate_container {
+    height: auto;
+    flex-direction: column; }
+    .estate_container .estate_container_img {
+      width: 100%;
+      height: 400px; }
+      .estate_container .estate_container_img .estate_link {
+        height: 400px; } }
 
 @media screen and (max-width: 575px) {
   .main_index_img div:first-child {

@@ -167,19 +167,19 @@
     width: 140%;
     left: -20%;
   }
-  .operation_type {
-    top: 25px;
-    left: 0;
-    background: $primary-color-red;
-    padding: 13px 20px;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #fff;
-    z-index: 100;
-  }
-}
 
+}
+.operation_type {
+  top: 25px;
+  left: 0;
+  background: $primary-color-red;
+  padding: 13px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  z-index: 1;
+}
 .news_box, .our_advantage_box {
   flex-grow: 1;
   flex-basis: 450px;
