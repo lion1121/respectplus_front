@@ -10,7 +10,7 @@ $(document).ready(function() {
             $('#sticky_box').addClass('sticky');
             $('#logo_box').addClass('sticky_header_logo_box').removeClass('header_logo_box');
             $('#custom_heater_form').addClass('custom_heater_form_sticky');
-            $('.main_index_img').css('margin-top','44px');
+            $('.first_section').css('margin-top','64px');
 
 
         } else {
@@ -18,7 +18,7 @@ $(document).ready(function() {
             $('#logo_box').addClass('header_logo_box').removeClass('sticky_header_logo_box');
             $('.custom_heater_form').css('margin','11px 0 16px 0');
             $('.mega_menu_hover_line:hover:after').css('bottom','0');
-            $('.main_index_img').css('margin-top','0');
+            $('.first_section').css('margin-top','0');
 
         }
     };
@@ -122,4 +122,21 @@ $(document).ready(function () {
       $(this).toggleClass('change');
       $('.main_nav').toggleClass('display_flex');
    });
+});
+
+
+$('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true
 });
