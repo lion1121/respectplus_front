@@ -760,6 +760,42 @@ footer {
     text-decoration: none;
     color: #fff; }
 
+.admin_list {
+  margin-top: 25px; }
+
+.admin_sidebar {
+  height: 100vh;
+  background-color: #2b2b2b; }
+
+.admin_submenu {
+  display: none;
+  margin: 5px 0 5px 15px; }
+
+.show {
+  display: block !important; }
+
+.admin_list_element {
+  text-align: center; }
+
+.admin_list_link {
+  padding: 7px 10px;
+  color: #fff; }
+  .admin_list_link:link {
+    text-decoration: none;
+    color: #fff; }
+  .admin_list_link:visited {
+    text-decoration: none;
+    color: #fff; }
+
+.current {
+  color: #d84949; }
+  .current:link {
+    text-decoration: none;
+    color: #d84949; }
+  .current:visited {
+    text-decoration: none;
+    color: #d84949; }
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #eeeeee;

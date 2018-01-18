@@ -1,0 +1,24 @@
+.admin_list {
+  margin-top: 25px;
+}
+.admin_sidebar {
+  height:100vh;
+  background-color: $primary-color-black;
+}
+.admin_submenu {
+  display: none;
+  margin: 5px 0 5px 15px;;
+}
+.show {
+  display: block !important;
+}
+.admin_list_element {
+  text-align: center;
+}
+.admin_list_link {
+  padding: 7px 10px;
+  @include color-link(#fff)
+}
+.current {
+  @include color-link($text-color-red);
+}
