@@ -339,7 +339,8 @@
 .input-group-text {
   color: #fff;
   border-radius: 0;
-  background-color: #d84949; }
+  background-color: #d84949;
+  width: 43px; }
 
 .advantage_wrapper {
   background-color: #333333; }
@@ -626,35 +627,138 @@ footer {
       font-size: 14px;
       font-weight: 400; }
 
-.slider-for {
+.picture {
+  display: flex;
   width: 100%;
-  height: auto;
-  margin: 30px auto 1px;
-  overflow: hidden; }
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .picture figure:first-child {
+    width: 50%;
+    align-self: baseline;
+    position: relative; }
+  .picture figure {
+    align-self: baseline;
+    margin: 3px;
+    width: 20%; }
+    .picture figure img {
+      width: 100%;
+      height: auto; }
 
-img {
+.sidebar_search {
   width: 100%;
-  min-height: 100%; }
+  padding: 30px 10px; }
 
-.slider-nav {
+.sidebar_search_title {
+  color: #333333;
+  margin-bottom: 10px;
+  font-size: 19px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.sidebar_search_select {
+  font-size: 14px; }
+  .sidebar_search_select:focus {
+    outline: 0 !important;
+    border-color: #dddddd;
+    box-shadow: 0 0 0 0.1rem rgba(221, 221, 221, 0.8); }
+
+.sidebar_search_btn {
   width: 100%;
-  height: 150px;
-  margin: auto; }
+  background: #d84949;
+  color: #fff;
+  border-radius: 0 !important; }
 
-.slider-nav .slick-track {
-  height: 150px; }
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 55px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: lowercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
-.slick-arrow {
+/* Hide the browser's default checkbox */
+.container-checkbox input {
   position: absolute;
-  top: 50%;
-  z-index: 50;
-  margin-top: -12px; }
+  opacity: 0;
+  cursor: pointer; }
 
-.slick-prev {
-  left: 0; }
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 41px;
+  background-color: #eee; }
 
-.slick-next {
-  right: 0; }
+/* On mouse-over, add a grey background color */
+.container-checkbox:hover input ~ .checkmark {
+  background-color: #ccc; }
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked ~ .checkmark {
+  background-color: #d84949; }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the checkmark when checked */
+.container-checkbox input:checked ~ .checkmark:after {
+  display: block; }
+
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark:after {
+  left: 16px;
+  top: 3px;
+  width: 10px;
+  height: 18px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.detail_property_description {
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px; }
+
+.detail_property_small {
+  width: 25%; }
+
+.detail_property_list {
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 22px 12px 22px 19px;
+  border: 1px solid #333333; }
+
+.estate-separator-line {
+  height: 2px;
+  background: #aaaaaa; }
+
+.detail_property_description_box {
+  width: 70%; }
+
+.search_back_link {
+  display: block;
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  background-color: #d84949; }
+  .search_back_link:link {
+    text-decoration: none;
+    color: #fff; }
+  .search_back_link:visited {
+    text-decoration: none;
+    color: #fff; }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -711,7 +815,21 @@ header {
   .btn_opearation a, .btn_opearation button {
     padding: 15px 40px; }
   footer .footer_btn_search {
-    padding: 7px 5px; } }
+    padding: 7px 5px; }
+  .detail_property_description {
+    flex-direction: column; }
+  .detail_property_description_box {
+    width: 100%;
+    order: -1; }
+  .detail_property_list {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .detail_property_list li {
+      margin: 0 10px; }
+  .detail_property_small {
+    width: 100%; } }
 
 @media screen and (max-width: 767px) {
   .header_logo_box {

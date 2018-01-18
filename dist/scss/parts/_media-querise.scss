@@ -38,6 +38,25 @@
   footer .footer_btn_search {
     padding: 7px 5px;
   }
+  .detail_property_description {
+    flex-direction: column;
+  }
+  .detail_property_description_box {
+    width:100%;
+    order:-1;
+  }
+  .detail_property_list {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    li {
+      margin: 0 10px;
+    }
+  }
+  .detail_property_small {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 767px){
