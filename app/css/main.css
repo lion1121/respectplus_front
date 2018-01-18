@@ -768,33 +768,68 @@ footer {
   background-color: #2b2b2b; }
 
 .admin_submenu {
-  display: none;
-  margin: 5px 0 5px 15px; }
+  padding: 0;
+  margin: 0 0 0 -27px !important;
+  display: none; }
+  .admin_submenu .admin_submenu_link {
+    color: #fff; }
+    .admin_submenu .admin_submenu_link:link {
+      text-decoration: none;
+      color: #fff; }
+    .admin_submenu .admin_submenu_link:visited {
+      text-decoration: none;
+      color: #fff; }
+
+.admin_submenu_element {
+  transition: 0.7s;
+  padding: 8px 0 8px 30px; }
+  .admin_submenu_element:hover {
+    background-color: #8e8e8e; }
 
 .show {
   display: block !important; }
 
 .admin_list_element {
-  text-align: center; }
+  margin: 8px 0;
+  text-align: left;
+  padding: 8px 0 8px 30px;
+  transition: 0.7s; }
 
 .admin_list_link {
+  position: relative;
   padding: 7px 10px;
-  color: #fff; }
+  color: #fff;
+  transition: 0.7s; }
   .admin_list_link:link {
     text-decoration: none;
     color: #fff; }
   .admin_list_link:visited {
     text-decoration: none;
     color: #fff; }
+  .admin_list_link i {
+    position: absolute;
+    top: 7px;
+    left: -13px; }
 
 .current {
-  color: #d84949; }
+  color: #d84949;
+  font-weight: 700; }
   .current:link {
     text-decoration: none;
     color: #d84949; }
   .current:visited {
     text-decoration: none;
     color: #d84949; }
+
+.admin_user_box {
+  width: 100%;
+  justify-content: center; }
+  .admin_user_box .user_photo_box {
+    margin-top: 30px;
+    background-color: #fff;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; }
 
 body {
   font-family: 'Roboto', sans-serif;
