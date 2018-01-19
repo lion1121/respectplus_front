@@ -8,58 +8,216 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="libs/slick-1.8.0/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="libs/slick-1.8.0/slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<div class="container-fluid no-gutters ">
-    <header class="admin_header row">
-
-    </header>
-    <div class="row ">
-        <aside class="col-2 admin_sidebar no_pd text-left">
-            <div class="admin_user_box d-flex">
-                <div class="user_photo_box"><img src="" alt="" class="admin_user_photo"></div>
+<header class="main_header_wrapper container-fluid sticky-top no-gutters no_pd">
+    <div class="container-fluid no_pd top_menu_wrapper  no-gutters">
+        <div class="container no_pd">
+            <div class="row no_mg align-items-center">
+                <div class="col-lg-5 offset-lg-3 col-md-5 offset-md-4  header_phone_block d-none d-md-block"><i
+                        class="fa fa-phone"></i>
+                    Звоните нам: (098,063,050)-557-92-92
+                </div>
+                <div class="col-sm-12  col-lg-3 offset-lg-1 col-md-3 social_wrapper">
+                    <ul class="list-unstyled list-inline pull-right social_item_list">
+                        <li class="list-inline-item social_item"><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+                        <li class="list-inline-item social_item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item social_item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <ul class="admin_list list-unstyled">
-                <li class="admin_list_element"><a href="#" class="admin_list_link"><i class="fa fa-users" aria-hidden="true"></i> Пользователи</a>
-                    <ul class="admin_submenu list-unstyled ">
-                        <li class="admin_submenu_element"><a href="#" class="admin_submenu_link">Список пользователей</a></li>
-                        <li class="admin_submenu_element"><a href="#" class="admin_submenu_link">Добавить пользователя</a></li>
-
-                    </ul>
-                </li>
-                <li class="admin_list_element"><a href="#" class="admin_list_link"><i class="fa fa-building-o" aria-hidden="true"></i> Объекты</a>
-                    <ul class="admin_submenu list-unstyled">
-                        <li class="admin_submenu_element"><a href="#" class="admin_submenu_link">Список объектов</a></li>
-                        <li class="admin_submenu_element"><a href="#" class="admin_submenu_link">Добавить объект</a></li>
-
-                    </ul>
-
-                </li>
-                <li class="admin_list_element"><a href="#" class="admin_list_link"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Новости</a>
-                <ul class="admin_submenu list-unstyled">
-                    <li class="admin_submenu_element"><a href="#" class="admin_submenu_link">Все новости</a></li>
-                    <li class="admin_submenu_element"><a href="#" class="admin_submenu_link">Добавить новость</a></li>
-
+        </div>
+    </div>
+    <div class="container-fluid menu_wrapper  no-gutters no_pd" id="sticky_box">
+        <div class="container menu_box no_pd clearfix">
+            <div class="col-lg-3 col-md-3 header_logo_box no_pd" id="logo_box">
+                <img src="img/header-logo.png" alt="">
+                <h1><a class="real_estate_name"
+                       href="http://respectplus.com.ua"><strong>Respect</strong><span>Plus</span></a></h1>
+                <h2><a class="real_estate" href="http://respectplus.com.ua">Агентство недвижимости</a></h2>
+            </div>
+            <div class="col-sm-12 col-md-9 offset-md-3 col-lg-9 clearfix offset-lg-3 no_pd menu_box position-relative">
+                <div class="menu_btn pull-right">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <ul class="list-unstyled list-inline  main_nav">
+                    <li class="menu_item"><a href="#" class="menu_link">главная</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">объекты</a></li>
+                    <li class="menu_item dropdown_element position-relative">
+                        <a href="#" class="menu_link ">услуги</a> <i class="fa fa-angle-down "></i>
+                        <div class="submenu position-absolute">
+                            <a class="dropdown-menu_item" href="#">Action</a>
+                            <a class="dropdown-menu_item" href="#">Another action</a>
+                            <a class="dropdown-menu_item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="menu_item"><a href="#" class="menu_link">новости</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">контакты</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link ">о нас</a></li>
                 </ul>
-            </li>
-                <li class="admin_list_element"><a href="#" class="admin_list_link"><i class="fa fa-line-chart" aria-hidden="true"></i> Отчеты</a>
-                    <ul class="admin_submenu list-unstyled">
-                        <li class="admin_submenu_element"><a href="#" class="admin_submenu_link">Lorem ipsum.SUB</a></li>
-                        <li class="admin_submenu_element"><a href="#" class="admin_submenu_link">Lorem ipsum.SUB</a></li>
-                        <li class="admin_submenu_element"><a href="#" class="admin_submenu_link">Lorem ipsum.SUB</a></li>
-                        <li class="admin_submenu_element"><a href="#" class="admin_submenu_link">Lorem ipsum.SUB</a></li>
-                    </ul>
-                </li>
+            </div>
+        </div>
+    </div>
+</header>
 
-            </ul>
-        </aside>
-        <div class="col-10">2</div>
+<section class="container-fluid no_pd no-gutters main_section mt-5 mb-5">
+    <div class="container no_pd">
+        <div class="row no_mg">
+            <div class="col-12">
+                <h3 class="main_title">Авторизация</h3>
+                <form action="">
+                    <div class="form-group row">
+                        <label for="login" class="col-sm-2 col-form-label">Логин</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="login" placeholder="Логин">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="password" class="col-sm-2 col-form-label">Пароль</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password" placeholder="Пароль">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-sm-2 col-sm-10 clearfix">
+                            <button type="submit" class="btn btn-primary pull-right signin_btn ">Войти</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
+<footer class="container-fluid no_pd no-gutters main_section ">
+    <div class="container no_pd">
+        <div class="row no_mg footer_wrapper">
+            <div class="col-12 col-md-4">
+                <h4 class="footer_title">Контакты</h4>
+                <ul class="footer_phone_list position-relative list-unstyled">
+                    <i class="fa fa-phone position-absolute"></i>
+                    <li>Телефоны</li>
+                    <li>098-557-92-92
+                    </li>
+                    <li>063-557-92-92
+                    </li>
+                    <li>050-557-92-92
+                    </li>
+                </ul>
+                <ul class="footer_email_list position-relative list-unstyled">
+                    <i class="fa fa-envelope position-absolute"></i>
+                    <li>E-mail</li>
+                    <li><a href="#">an.respectplus@gmail.com</a></li>
+                </ul>
+                <ul class="footer_skype_list position-relative list-unstyled">
+                    <i class="fa fa-skype position-absolute"></i>
+                    <li>Skype</li>
+                    <li>an.respectplus@gmail.com</li>
+                </ul>
+                <ul class="footer_social_list position-relative list-unstyled">
+                    <i class="fa fa-facebook-f position-absolute"></i>
+                    <li>Мы в фейсбуке</li>
+                    <li><a href="#">facebook.com/an.respectplus</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3">
+                <h4 class="footer_title">Навигация</h4>
+                <ul class="secondary_menu list-unstyled">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Объекты</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">О нас</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-5 footer_search_box">
+                <h4 class="footer_title">Поиск по сайту</h4>
+                <form action="" class="form-inline">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Поиск ...">
+                        <button type="submit" class="footer_btn_search">Искать</button>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="row no_mg">
+            <div class="w-100 footer_line mt-3"></div>
+        </div>
+        <div class="row no_mg mt-2 copyright_wrapper">
+            <p class="copyright">Copyright <i class="fa fa-copyright"></i> 2018 RespectPlus. Designed by <a href="#">[Module.Dev]</a> All rights reserved.</p>
+        </div>
+    </div>
+
+</footer>
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title text-center">Отправьте нам сообщение, Вам перезвонят</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="">
+                    <div class="form-group row">
+                        <label for="typeOperation" class="col-md-3 col-form-label">Я бы хотел(а):</label>
+                        <div class="col-md-9">
+                            <select type="text" class="form-control" id="typeOperation">
+                                <option value="">Купить</option>
+                                <option value="">Продать</option>
+                                <option value="">Арендовать</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="typeObject" class="col-md-3 col-form-label">Недвижимость:</label>
+                        <div class="col-md-9">
+                            <select type="text" class="form-control" id="typeObject">
+                                <option value="">Дом</option>
+                                <option value="">Квартиру</option>
+                                <option value="">Участок земли</option>
+                                <option value="">Гараж</option>
+                                <option value="">Коммерческое здание</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="feedbackPhone" class="col-md-3 col-form-label">Мой номер телефона:</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="feedbackPhone"
+                                   placeholder="Введите номер телефона">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="feedbackName" class="col-md-3 col-form-label">Меня зовут:</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="feedbackName"
+                                   placeholder="Ваше имя">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary new_ad_sent" >Отправить</button>
+            </div>
+
+        </div>
     </div>
 </div>
 <script src="libs/jquery/jquery-3.2.1.js"></script>
 <script src="libs/bootstrap/js/bootstrap.js"></script>
-<script src="js/ad_panel.js"></script>
+<script type="text/javascript" src="libs/slick-1.8.0/slick/slick.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

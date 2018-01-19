@@ -70,3 +70,12 @@
       border-radius: 50%;
     }
 }
+.admin_exit_link {
+  @include color-link($text-color-red);
+    &:hover {
+      color: #fff !important;
+    }
+}
+.admin_username {
+  color: #fff;
+}
